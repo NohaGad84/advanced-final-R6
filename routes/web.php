@@ -46,7 +46,7 @@ Route::group(['prefix' => 'public'], function () {
         'controller' => TopicController::class,
         'prefix' => 'topics',
         'as' => 'admin.topics.',
-        // 'middleware' => 'verified', 
+        'middleware' => 'verified', 
     ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('create', 'create')->name('create');
@@ -64,7 +64,7 @@ Route::group(['prefix' => 'public'], function () {
         'controller' => CategoryController::class,
         'prefix' => 'categories',
         'as' => 'admin.categories.',
-        // 'middleware' => 'verified', 
+        'middleware' => 'verified', 
     ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('create', 'create')->name('create');
@@ -81,7 +81,7 @@ Route::group(['prefix' => 'public'], function () {
         'controller' => MessageController::class,
         'prefix' => 'messages',
         'as' => 'admin.messages.',
-        // 'middleware' => 'verified', 
+        'middleware' => 'verified', 
     ], function () {
         Route::get('/', 'index')->name('message');
         Route::get('messages/{id}','show')->name('show');
@@ -95,7 +95,7 @@ Route::group(['prefix' => 'public'], function () {
         'controller' => TestimonialController::class,
         'prefix' => 'testimonials',
         'as' => 'admin.testimonials.',
-        // 'middleware' => 'verified', 
+        'middleware' => 'verified', 
     ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('create', 'create')->name('create');
@@ -114,7 +114,7 @@ Route::group(['prefix' => 'public'], function () {
         'controller' => UserController::class,
         'prefix' => 'users',
         'as' => 'admin.users.',
-        // 'middleware' => 'verified', 
+        'middleware' => 'verified', 
     ], function () {
         Route::get('/', 'index')->name('index');
         Route::get('create', 'create')->name('create');
